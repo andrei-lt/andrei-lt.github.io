@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect to App</title>
+    <script>
+        function redirectToApp() {
+            // Try to open the app using the deeplink
+            window.location = "linktree://shop";
+
+            // If the app is not installed, redirect to Google after a delay
+            setTimeout(function() {
+                window.location = "https://www.linktr.ee";
+            }, 500); // 2 seconds delay
+        }
+    </script>
+</head>
+<body onload="redirectToApp()">
+    <p>Redirecting...</p>
+</body>
+</html>
